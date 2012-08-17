@@ -1,5 +1,5 @@
 import proguard.{Configuration=>ProGuardConfiguration, ProGuard, ConfigurationParser}
-
+import java.util.Properties
 import sbt._
 import Keys._
 import AndroidKeys._
@@ -151,7 +151,7 @@ object AndroidInstall {
                    """ ::
                  proguardOption :: Nil )
           val config = new ProGuardConfiguration
-          new ConfigurationParser(args.toArray[String]).parse(config)
+          new ConfigurationParser(args.toArray[String], new Properties).parse(config)
           streams.log.debug("executing proguard: "+args.mkString("\n"))
           new ProGuard(config).execute
           Some(classesMinJarPath)
