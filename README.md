@@ -15,9 +15,9 @@ you're not not familiar with sbt make sure to check out its excellent
 ## Hacking on the plugin
 
 If you need make modifications to the plugin itself, you can compile
-and install it locally (you need at least sbt 0.11.x to build it):
+and install it locally (you need at least sbt 0.12.x to build it):
 
-    $ git clone git://github.com/jberkel/android-plugin.git
+    $ git clone git://github.com/jackywyz/android-plugin.git
     $ cd android-plugin
     $ sbt publish-local
 
